@@ -16,9 +16,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "symfony/process": "*",
-        "symfony/phpunit-bridge": "*",
-        "phpunit/phpunit": "^11.1"
+        "ext-json": "*"
     },
     "extra": {
         "symfony": {
@@ -29,7 +27,9 @@
         }
     },
     "require-dev": {
+        "phpunit/phpunit": "*",
         "symfony/flex": "^2.4",
+        "symfony/phpunit-bridge": "*",
         "torfs-ict/code-quality-pack": "^1.0"
     },
     "config": {
