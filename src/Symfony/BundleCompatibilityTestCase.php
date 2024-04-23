@@ -121,6 +121,7 @@ abstract class BundleCompatibilityTestCase extends TestCase
 
     protected function tearDown(): void
     {
+        $this->setUp();
     }
 
     abstract public function postCompatibilityTest(string $version): void;
