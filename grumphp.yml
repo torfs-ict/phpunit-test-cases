@@ -1,0 +1,24 @@
+grumphp:
+    stop_on_failure: true
+    fixer:
+        fix_by_default: true
+    tasks:
+        composer: ~
+        git_blacklist:
+            keywords:
+                - "die\\("
+                - "var_dump\\("
+                - "print_r\\("
+                - "print\\("
+                - "dump\\("
+                - "debug_backtrace\\("
+                - "exit;"
+                - "echo "
+                - "console.log\\("
+            regexp_type: E
+        phpcsfixer2:
+            config: ./.php-cs-fixer.dist.php
+        phpstan: ~
+        securitychecker_symfony: ~
+        yamllint:
+            parse_custom_tags: true

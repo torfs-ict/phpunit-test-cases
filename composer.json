@@ -1,0 +1,48 @@
+{
+    "name": "torfs-ict/phpunit-test-cases",
+    "description": "Library of reusable test cases",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TorfsICT\\Tests\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kristof Torfs",
+            "email": "kristof@torfs.org"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "symfony/process": "*",
+        "symfony/phpunit-bridge": "*",
+        "phpunit/phpunit": "^11.1"
+    },
+    "extra": {
+        "symfony": {
+            "endpoint": [
+                "https://api.github.com/repos/torfs-ict/symfony-flex-recipes/contents/index.json",
+                "flex://defaults"
+            ]
+        }
+    },
+    "require-dev": {
+        "symfony/flex": "^2.4",
+        "torfs-ict/code-quality-pack": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "phpro/grumphp-shim": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    }
+}
